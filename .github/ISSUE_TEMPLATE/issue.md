@@ -1,5 +1,6 @@
 ---
 name: "Default issue template"
+about: "🍆🍆🍆"
 ---
 
 ### 🍆 Description
