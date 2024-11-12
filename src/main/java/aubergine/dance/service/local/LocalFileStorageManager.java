@@ -7,10 +7,11 @@ public class LocalFileStorageManager implements StorageManager {
 
     @Override
     public void createDirectory(String directory) {
-        File file = new File(directory);
-        if (!file.exists()) {
-            file.mkdirs();
+        if (isDirectoryExists(directory)) {
+            return;
         }
+        File file = new File(directory);
+        file.mkdirs();
     }
 
     @Override
