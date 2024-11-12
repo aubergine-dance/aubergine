@@ -33,7 +33,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
     // AWS S3
-    implementation 'software.amazon.awssdk:s3:2.25.27'
+    implementation 'software.amazon.awssdk:s3:2.29.9'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
