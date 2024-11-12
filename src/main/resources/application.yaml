@@ -1,0 +1,50 @@
+spring:
+  profiles:
+    active: local
+
+  jpa:
+    properties:
+      hibernate:
+      show_sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+aws:
+  s3:
+    bucket-name: aubergine-dance
+    directory: problems/
+    credentials:
+      region: ap-northeast-2
+      access-key: TESTTESTTESTTESTTEST
+      secret-key: TESTTESTTESTTESTTESTTESTTEST
+
+aubergine:
+  init:
+    directories:
+      - problem_info.json
+      - statement/legend/
+      - statement/input_format/
+      - statement/output_format/
+      - statement/note/
+      - statement/examples/
+      - solution/
+      - in/
+      - out/
+      - checkers/
+      - validators/
+      - generators/
+      - misc/
