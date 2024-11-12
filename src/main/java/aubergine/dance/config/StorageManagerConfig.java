@@ -5,7 +5,6 @@ import aubergine.dance.service.local.LocalFileStorageManager;
 import aubergine.dance.service.s3.AwsS3Properties;
 import aubergine.dance.service.s3.S3StorageManager;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +26,7 @@ public class StorageManagerConfig {
     }
 
     @Bean
-    @Profile({"dev", "prod"})
+    @Profile("s3")
     public StorageManager s3StorageManager() {
         return new S3StorageManager(s3Client, awsS3Properties);
     }
