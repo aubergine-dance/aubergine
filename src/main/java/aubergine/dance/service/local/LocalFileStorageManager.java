@@ -2,11 +2,7 @@ package aubergine.dance.service.local;
 
 import aubergine.dance.service.StorageManager;
 import java.io.File;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
 
-@Profile("local")
-@Component
 public class LocalFileStorageManager implements StorageManager {
 
     @Override
